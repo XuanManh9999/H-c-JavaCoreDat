@@ -1,79 +1,55 @@
 package module2;
-
+import java.util.Scanner;
+/*
+* Class: Main
+* Phương thức:
+* * main: Được sử dụng để chạy trương trình
+* @return 0
+* */
 public class Main {
+//    static int a;
+//    static double c;
+//    static boolean f;
+    public String name = "Đạt";
+
     public static void main(String[] args) {
-//        System.out.println("\uD83E\uDD23");
-//        System.out.println("❤️");
-        // bảng mã Unicode
-//      Java được xây dựng trên bảng chữ cái Unicode, một hệ thống mã hóa quốc tế bao gồm hầu hết các ngôn ngữ và biểu
-//      tượng trên thế giới. Điều này cho phép ngôn ngữ Java hỗ trợ nhiều ngôn ngữ và ký tự đặc biệt.
-//        for (int i = 0; i < 10; i++) {
-//            System.out.println("i: " + i);
-//            for (int j = 0; j <= 10; j++) {
-//                if (i >=  1) {
-//                    break;
-//                }
-//                System.out.println("j: " + j );
-//            }
-//        }
-//
-//        int a = 1;// định danh a
-//        int b = 2;// định danh b
+//        Main main = new Main();
+//        System.out.println(main.name);
 
-        // Quy tắc định danh trong java
-//        Trong java tên được đặt theo quy tắc sau:
-    //        Không trùng với từ khoá VD: int int  = 1; tên biến int trùng từ khoá
-    //        Không bắt đầu bằng một số, tên phải bắt đầu bằng kí tự hoặc bắt đầu bằng kí tự $,_
-    //        Không chứa dấu cách, các kí tự toán học như +, -, *,/, %..
-    //        Không trùng với một định danh khác trong cùng một phạm vi
+        // dùng Scanner đọc chuỗi từ màn hình console
 
-//        int 123 = 1;
-//        int 1a = 2;
-//        int $_1 = 1;
-//        int _1 = 1;
-//        int a*b  = 1;
+        /*
+            Scanner scanner = new Scanner(System.in);// System.in đây là đầu vào
+            Boolean a = scanner.nextBoolean(); // nhập số nguyên
+            System.out.println(a);
+         */
+//        byte value1 = 127;// -128 - 127
 
-//        String b = "a";
-//        int b = 2;
+//        float fx = 12.333f;
+//        System.out.println(fx + 2.2f);
 
-        // khuyên dùng khi định danh trong java
-//        Tên nên đặt sao cho có thể mô tả được đối tượng trong thực tế
-//        Java có phân biệt chữ hoa chữ thường
-//        Trong java ta có thể đặt tên với độ dài tuỳ ý
-//        Ta có thể sử dụng các kí tự tiếng việt để đặt tên
-//        int mạnh = 12;
-//        System.out.println(mạnh);
+//        System.out.println(value1 + 1);// Nó tự chuyển đổi về int trước khi cộng
 
-//        String product = "Bim bim";
-//        String Product = "Kẹo mút";
+        // Trong C, 1 -> true, 0 -> false
+//        System.out.println(a);
+//        System.out.println(c);
+//        System.out.println(f);
 
-//        Đối với biến và phương thức thì tên bao giờ cũng bắt đầu bằng ký tự thường, nếu tên có nhiều từ thì ghép lại thì: ghép tất cả các từ thành một, ghi từ đầu tiên chữ thường,
-//        viết hoa kí tự đầu tiên của mỗi từ theo sau trong tên, ví dụ area, radius, readInteger, …
-//        Đối với tên lớp, giao diện (interface) ta viết hoa các kí tự đầu tiên của mỗi từ trong tên, ví dụ lớp WhileTest, Circle
-//        Tên hằng bao giờ cũng viết hoa, nếu tên gồm nhiều từ thì chúng được nối với hau bởi kí tự gạch dưới ‘_’, ví dụ PI, MAX_VALUE;
-
+        // khai báo 3 biến
 //        int a = 1;
-//        final float PI = 3.13F;
-            // Khối lệnh trong java {} được sử dụng để tạo phạm vi cục bộ (local scope). Phạm vi cục bộ nghĩa là các biến hãy
-        // các giá trị khác nếu được định nghĩa trong khối lệnh thì sẽ chỉ được sử dụng bên trong khối lệnh đó
+//        int b = 2;
+//        int c = 3;
+//          int a, b, c; // có 3 biến a, b, c
 
 
+    sleep();
     }
 
-    public void sleep () {
-        // khối lệnh được
-        int a = 1;
+    public static void sleep() {
+        int n = 0; // nằm trong stack
+        {
+            System.out.println(n);
+        }
     }
 
-
-//    public class Person {
-//
-//    }
-//    interface User
-
-
-    // Đối và lớp là gì
-    // Lớp -> Lớp là một kiểu dữ liệu trong java, nó là một thành phần nguyên mẫu, chứa các thuộc tính, và phương thức. Nó
-    // dùng để tạo ra các đối tượng (instance)
-    // Đối tượng(instance) đối tượng là thể thể hiện của lớp, hay ta hiểu là đối tượng là thành phần được tạo ra từ mẫu lớp
 }
