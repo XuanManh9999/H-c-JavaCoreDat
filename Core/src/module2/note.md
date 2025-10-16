@@ -159,4 +159,156 @@ Kiểu dữ liệu của biến cũng chính là kiểu dữ liệu lưu trên b
 +, Giá trị mặc định của biến static phụ thuộc vào kiểu dữ liệu bạn khai báo tương tự biến instance.
 +, Biến static được truy cập thông qua tên của class chứa nó, với cú pháp: TenClass.tenBien.
 +, Trong class, các phương thức sử dụng biến static bằng cách gọi tên của nó khi phương thức đó cũng được khai báo với từ khóa static.
+-- Buổi 2 trong chương 2
+# Hàm - Phương thức trong Java
+Hàm hay phương thức (method) trong Java là một khối lệnh để thực hiện một hành động cụ thể.
+Ví dụ khi chúng ta gọi hàm System.out.println() thì hệ thống sẽ hiện thị dữ liệu của chúng ta truyền vào
+Cú pháp:
+modifier returnType nameOfMethod (Parameter List) {
+// method body
+}
 
+Trong đó:
+
+Modifiers: Tạm dịch là phạm vi sửa đổi và truy cập (public, private, protected)
+returnType: Là kiểu dữ liệu trả về (int, float, void, boolean...)
+nameOfMethod: Là tên của hàm (method) (tên hàm: handleCreateUser)
+Parameter là các tham số đầu vào của hàm (có thể có nhiều tham số với nhiều kiểu dữ liệu khác nhau)
+method body: là các mã code bên trong hàm
+
+Trước khi chúng ta tìm hiểu về cách gọi hàm thì chúng ta tìm hiểu về các loại hàm. Java có 2 loại hàm, mỗi loại sẽ có cách gọi khác nhau:
+
++, Hàm có trả về kết quả
++, Hàm không trả về kết quả
+
+Có thể bạn chưa biết
+
+Hàm hoanDoiViTri sẽ không làm ảnh hưởng đến giá trị của của các tham số truyền vào.
+Trong một class nếu có 2 method cùng tên và cùng tham số đầu vào thì trình biên dịch sẽ báo lỗi
+Thông thường trong một lớp các phương thức nên được khai báo dùng từ khóa public, khác với vùng dữ liệu thường là dùng tiền tố private vì mục đích an toàn.
+
+# Cần nhớ về hàm
++, Khi dùng hàm nếu ta truyền các giá trị kiểu nguyên thuỷ vào đối số của hàm, thì không làm thay đổi giá trị ban đầu
++, Hàm trong lớp thì thường được khai báo dạng public vì thường để đối tượng có thể truy cập 
++, Tính chất orverloading trong java
+# Nếu 2 method có cùng tên nhưng khác tham số đầu vào thì đó gọi là method overloading.
+
+
+
+# Các toán tử trong Java
+        System.out.println(a++);// Tăng a lên 1 và trả về giá trị sau tăng -> a tăng lên một = 6 -> giá trị trước tăng = 5
+        System.out.println(a);// 6
+
+        System.out.println(++a); // Tăng a lên 1 đơn vị trước, và trả về giá trị sau khi đã tăng
+        System.out.println(a);
++, Kết quả của phép so sánh (>=, <=, !=, ==, >, <): Luôn trả về true, false
++, Phép toán logic gồm (&&, ||, !)
+
+
+# Các thứ tự ưu tiên khi thực thi
+Thứ tự ưu tiên của các phép toán xác định trình tự tính toán giá trị của một biểu thức, java có những quy tắc riêng để xác định trình tự tính toán của biểu thức, ta phải nhớ quy tắc sau:
+
+Các phép toán một ngôi bao giờ cũng được thực hiện trước tiên
+Trong một biểu thức có nhiều phép toán thì phép toán nào có độ ưu tiên cao hơn sẽ được thực hiện trước phép toán có độ ưu tiên thấp
+Trong một biểu thức có nhiều phép toán có độ ưu tiên ngang nhau thì chúng sẽ được tính theo trình tự từ trái qua phải
+Ta có bảng tóm tắt thứ tự ưu tiên của các phép toán trong bảng sau:
+
++, Nhân chia trước, cộng trừ sau
++, Nếu mà cùng thứ tự ưu tiên VD: Nhân, chia thì nó sẽ đi từ trái qua phai
+
+
+# Ép kiểu trong Java
+
++, Ép kiểu trong java là việc gán giá trị của một biến có kiểu dữ liệu này tới biến khác có kiểu dữ liệu khác,
+chú ý là trong bài này chỉ nói đến ép kiểu dữ liệu đối với dữ liệu nguyên thủy. Có 2 kiểu ép kiểu (chuyển đổi kiểu) đó là
+
++, Ép kiểu không tường minh:
+  Việc ép kiểu thường được diễn ra một cách tự động trong trường hợp biểu thức gồm 
+  nhiều toán hạng có kiểu dữ liệu khác nhau. Điều này đôi khi làm cho bạn khá ngạc nhiên vì nhận được
+  một kết quả không theo ý muốn.
+VD: int two=2, three=3;
+
+float result= 1.5 + three/two; // out -> 2.5 -> sai
+
+Kết quả nhận được của result là 2.5. Điều mà bạn mong muốn là 3.0 chứ không phải là 2.5. Kết quả 2.5 nhận được
+là do three và two là hai giá trị nguyên nên kết quả của phép chia three/two cho ta một giá trị nguyên bằng 1 chứ 
+không phải là 1.5. Để nói rằng kết quả của phép chia three/two là một giá trị thực chứ không phải là một giá trị 
+nguyên thì một trong hai toán hạng của phép chia này phải là một số thực. Do vậy ta cần phải chuyển kiểu của một
+trong hai toán hạng này hoặc cả hai thành số thực. Để nhận được kết quả đúng trong trường hợp này bạn cần viết như sau:
+
+float result=1.5 + (float) three/two; // hoặc
+float result=1.5 + three/(float)two; // hoặc
+float result=1.5 +(float)three/(float)two;
++, Ép kiểu tường minh
+
+([kiểu dữ liệu muốn chuyển đổi]) [biểu thức];
+
+Khi gặp câu lệnh này java sẽ tính toán giá trị của biểu thức sau đó chuyển đổi kiểu giá trị
+của biểu thức thành kiểu kiểu dữ liệu muốn chuyển đổi
+
+(int) 2.5 * 2 = 4
+(int) 2.5 * 2.5 = 5
+(int)(2.5 * 2.5) = 6
+1 + (float) 5 / 2 = 1 + 5 / (float)2 =1 + (float)5 / (float)2 = 3.5
+
+Có thể bạn chưa biết
+
+Phép toán chuyển kiểu là phép toán có độ ưu tiên cao
+Cần chú ý khi chuyển một biểu thức kiểu dữ liệu có miền giá trị lớn sang một kiểu có miền giá trị nhỏ hơn. 
+Trong trường hợp này có thể bạn sẽ bị mất thông tin.
+
+
+# Chuyển đổi kiểu dữ liệu trong Java
+Chuyển đổi String thành int trong java
+int i = Integer.parseInt("200");
+
+Keyword: KiểuDuLieu.parseKieuDuLie(value muốn chuyển đổi)
+Ví dụ:
+        Integer a = 12;
+        // Chuyển về chuỗi
+        String s = a.toString();// chuỗi cuỗi
+//        System.out.println(s instanceof String);
+
+
+        String reusltString = String.valueOf(a);
+        // Chuyển Số nguyên về số thực
+        Float reusltFLoat = Float.parseFloat(s);
+        System.out.println(reusltFLoat);
+        // Chuyển đồ về Double
+        Double resultDouble = Double.parseDouble(String.valueOf(a));
+        System.out.println(resultDouble);
+
+Chuyển đổi String thành Date trong java
+Chúng ta có thể chuyển đổi String thành Date trong java bằng cách sử dụng phương thức parse()
+của các lớp DateFormat và SimpleDateFormat.
+
+public static void main(String[] args) throws Exception {
+    String sDate = "17/07/2017";
+    Date date = new SimpleDateFormat("dd/MM/yyyy").parse(sDate);
+    System.out.println(sDate + "\t" + date);
+}
+
++, Ngoài các cách chuyển đổi kiểu dữ liệu số học thành String ở trên, java cung cấp toán tử cộng 
++ cũng được sử dụng để chuyển các kiểu số thành String.
+VD: 1 + "" = "1"
+  Integer kq = 12;
+  System.out.println((kq + "") instanceof String);
+
+# Các hàm toán học trong java
+Java là một ngôn ngữ lập trình mạnh mẽ không chỉ trong việc xử lý dữ liệu và chuỗi, mà còn 
+cung cấp một loạt các hàm toán học phong phú thông qua lớp Math. Lớp này được đặt sẵn trong gói java.lang, 
+do đó bạn không cần phải thêm câu lệnh import để sử dụng các hàm toán học này. Hãy cùng điểm qua các hàm toán 
+học quan trọng trong Java.
++, Các giá trị cần nhớ:
+- E có kq là bằng: 2.7
+- PI có kq là bằng: 3.14
+- abc(value) -> giá trị tuyệt đối VD: Math.abc(-3.5) => 3.5
+- Math.ceil(value) -> dùng để làm tròn lên. VD: Math.ceil(3.1) => 4
+- Math.floor(value) -> dùng để làm trong xuống. VDL Math.floor(3.9) -> 3
+- Math.round(value) -> hàm làm tròn đều VD: Math.round(3.5) -> 4, Math.round(3.49) -> 3
+- Math.floorDiv(-100, 9) -> -12 -> chia một số nguyên cho một số khác và làm tròn kết quả xuống đến số nguyên gần nhất.
+- Math.max(...list số, danh sách số) -> tìm số lớn nhất
+- Math.min(...list số, danh sách số) -> tìm số bé nhất
+- Math.pow(giá trị, số mũ) -> dùng để tính luỹ thừa
+- Math.sqrt(giá trị) -> tính căng bậc 2
+- Math.random() ->  trả về một số ngẫu nhiên trong khoảng từ 0 (bao gồm) đến 1 (không bao gồm).

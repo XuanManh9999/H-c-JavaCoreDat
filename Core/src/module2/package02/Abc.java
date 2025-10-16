@@ -9,5 +9,4 @@ public class Abc {
         System.out.println(Abc.a);
         System.out.println(Abc.a);
     }
-
 }
