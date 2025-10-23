@@ -312,3 +312,116 @@ học quan trọng trong Java.
 - Math.pow(giá trị, số mũ) -> dùng để tính luỹ thừa
 - Math.sqrt(giá trị) -> tính căng bậc 2
 - Math.random() ->  trả về một số ngẫu nhiên trong khoảng từ 0 (bao gồm) đến 1 (không bao gồm).
+# Kiểu dữ liệu rẽ nhánh
+
++, Trong Java có 2 cấu trúc rẽ nhánh if là dạng khuyết và dạng đủ
+=> Dạng if là dạng nó chỉ có mỗi IF không thôi
+=> Dạng đầy đủ là dạng mà có cả IF cả else
+
+# Câu lệnh rẽ nhánh nó chỉ vào thực thi 1 nhánh thôi
+
+# Câu lệnh switch-case
+switch(biến) {
+case giá trị 1:
+câu lệnh 1;
+câu lệnh 2;
+...
+break;
+case giá trị 2:
+câu lệnh 1;
+câu lệnh 2;
+...
+break;
+...
+case giá trị n:
+câu lệnh 1;
+câu lệnh 2;
+...
+break;
+}
+
+# Toán tử 3 ngôi    
+Toán tử điều kiện là một loại toán tử đặc biệt vì nó gồm ba thành phần cấu thành biểu thức điều kiện, 
+hay nói cách khác toán tử điều kiện là toán tử 3 ngôi.
+
+biến kq = Biểu thức logic ? Câu lệnh khi biểu thức trả về true : Câu lệnh khi biểu thức trả về false;
+//        String result = gender == "Nam" ? "True" : "False";
+//        System.out.println(result);
+
+
+# Vòng lặp trong Java
+Khi chúng ta cần thực hiện một đoạn code một vài lần, điều này có thể được xem như một vòng lặp.
+
+Java có 3 kỹ thuật lặp linh động, bạn có thể sử dụng một trong ba vòng lặp sau:
+# Block dùng để thoát khỏi vòng lặp gần nó nhất (hay nói là vòng lặp mà nó đang nằm trong)
++, Vòng lặp for
+for (giá trị khởi tạo; điều kiện; bước nhảy) {
+    // block
+}
++, Vòng lặp while
++, Vòng lặp do…while
+
+Vòng lặp for trong java thường được sử dụng trong trường hợp biết trước số lần lặp, còn nếu số lần lặp không 
+cố định thì nên sử dụng vòng lặp while hoặc do while. Trong bài này chúng ta sẽ cùng nhau tìm hiểu về vòng lặp
+for trong Java nhé.
+
+
+
+Có thể bạn chưa biết
+    Nếu ta khai báo biến chạy trong Biểu thức khởi tạo vòng lặp thì sau khi kết thúc, biến chạy tự giải phóng
+    Thân của cấu trúc lặp for ta chỉ có thể đặt được duy nhất một lệnh, do vậy để có thể thực hiện nhiều tác vụ trong thân for ta phải bao chúng trong khối lệnh
+    Thân vòng lặp for có thể không được thực hiện lần nào
+    Các phần Khởi tạo biến chạy, Biểu thức điều kiện, Thay đổi biến chạy có thể khuyết tuy nhiên dấy phẩy dành cho nó vẫn phải có
+    Số lần thực hiện Khởi tạo biến chạy là 1 lần
+    Số lần thực hiện Biểu thức điều kiện bằng số lần lặp + 1
+    Số lần thực hiện Biểu thức điều kiện bằng số lần lặp
+    Ta có thể đặt một vài khai báo biến trong phần Khởi tạo biến chạy
+    Ta có thể mô tả cấu trúc while thông qua cấu trúc for như sau for(; Biểu thức boolean;) statement;
+VD:
+for (int i = 0, k = 12;( i < 10) && (k <= 12); i++, k++) {
+    System.out.println("i" + i);
+    System.out.println("k" + k);
+}
+
+int k = 12;
+for (;k != 0;) {
+   System.out.println(k); 
+   k--; 
+}
+
+
+# Từ khóa break và continue
+    Bên trong thân của các cấu trúc lặp ta có thể điều khiển luồng thực hiện bằng cách sử dụng lệnh break hoặc continue. 
+    Từ khóa break trong java dùng để thoát một vòng lặp, từ khóa continue được dùng để bỏ tiếp tục vòng lặp.
+# Tóm lại lệnh break sẽ thoát khỏi vòng lặp mà nó nằm trong đó (lưu ý nếu có nhiều vòng lặp thì nó chỉ thoát 1 vòng)
+# continue thì hiểu đơn giản là khi vòng lặp chạy đến continue thì nó sẽ bỏ qua các câu lệnh nằm bên dưới nó, và nó sẽ
+# chuyên đến phần bước nhảy và điều kiện luôn
+
+
+
+# Chuỗi trong Java (được lưu trong vùng nhớ heap )
+    String là một chuỗi các ký tự kết hợp lại. Ví dụ "thaycacac" là một chuỗi gồm 9 ký tự 't', 'h', 'a', 'y', 'c', 'a', 'c', 'a', 'c' kết hợp lại.
+    String trong java là một object immutable, nghĩa là bạn không thể thay đổi giá trị của String khi nó đã được khởi tạo.
+
+    Khởi tạo String trong java
+    Trong java chúng ta có 2 cách để tạo một chuỗi
+    
+    Chuỗi ký tự
+    Sử dụng từ khoá new
+
+    Sau khi khởi tạo string1 thì chuỗi "Thaycacac" sẽ được lưu vào vùng nhớ heap tại string pool. Đến khi khởi 
+    tạo khởi string2, việc đầu tiên là tìm kiếm trong string2, nếu đã có chuỗi tương tự thì sẽ không cần khởi tạo 
+    thêm mà gán thẳng cho string2, nếu không thì mới bắt đầu khởi tạo.
+
+# Các hàm thường sử dụng của String
++, length(): Trả về số lượng ký tự trong chuỗi
++, substring(int begin, int end): Trả về chuỗi con từ vị trí begin đến end + 1
++, concat(String s): Nối chuối s vào cuối chuỗi # name.concat("Nguyễn Xuân Mạnh")
++, indexOf(String str, int fromIndex): Trả về vị trí xuất hiện đầu tiên của str bắt đầu từ vị trí
++, lastIndexOf(String str): Trả về vị trí xuất hiện cuối cùng của str
++, boolean equals(Object obj): So sánh với string obj
++, boolean equalsIgnoreCase(String str): So sánh với chuỗi str, bỏ
++, String toLowerCase(): Chuyển tất cả các ký tự thành ký tự thường.
++, String toUpperCase(): Chuyển tất cả các ký tự thành ký tự hoa
++, String trim(): Xoá các khoảng trắng ở đầu và cuối chuỗi
++, String replace(char old, char new): thay thế các ký tự old thành new

@@ -12,6 +12,7 @@ public class MainBuoi2 {
         b = c; // gán b bằng giá trị cũ của a sau khi gán cho b
         System.out.println("Giá trị a: " + a);
         System.out.println("Giá trị b: " + b);
+        // Java -> Python, JS
     }
 
 
